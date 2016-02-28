@@ -1,0 +1,32 @@
+{
+  "name": "express-angular-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajay-Mathur/express-angular-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ajay-Mathur/express-angular-node/issues"
+  },
+  "homepage": "https://github.com/Ajay-Mathur/express-angular-node#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "less": "latest",
+    "mongodb": "^2.1.7",
+    "mongoose": "latest",
+    "multer": "^1.1.0",
+    "angular": "latest"
+  },
+  "devDependencies": {
+    "connect-modrewrite": "^0.8.5"
+  }
+}
