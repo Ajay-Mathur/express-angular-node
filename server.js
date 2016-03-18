@@ -38,15 +38,6 @@ app.get("/saveStory",function(req,res){
 		}
 		//res.end('{"error":"New Story"}');
 	})
-
-	/*story.save(function(err){
-		if(err){
-			console.log(err);
-		}else{
-			console.log("success");
-		}
-		res.end("h1 h1");
-	})*/
 });
 //fetch the story
 app.get("/seeStory",function(req,res){

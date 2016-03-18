@@ -9,29 +9,25 @@
 		<script type="text/javascript" src="public/js/factory.js"></script>
 		<script type="text/javascript" src="public/js/controllers.js"></script>
 		<script type="text/javascript" src="public/js/app.js"></script>
+		<title>Hello</title>
 	</head>
 	<body ng-controller="baseController">
 		<header ng-init="menuVisible = false">
 			<menuhead ng-click="toggleMenu;menuVisible = menuVisible? false: true">
-				<svg width="40" height="40">
-				   <rect x="0" y="0" width="40" height="8" style="fill:rgb(255,255,255); stroke-width:1;stroke:rgb(0,0,0)" />
-					<rect x="0" y="14"width="40" height="8" style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
-					<rect x="0" y="28" width="40" height="8" style="fill:rgb(255,255,255);stroke-width:1;stroke:rgb(0,0,0)" />
-				   Sorry, your browser does not support inline SVG.
-				</svg>
 			</menuhead>
-			<header><h2>StoryBoard</h2></header>
-			<menu ng-class="{menuvisible : menuVisible,menuhidden : !menuVisible}" >
-				<ul>
-					<li>Home</li>
-					<li>About</li>
-				</ul>
-			</menu>
-		</header>
-		<!--<ul>
-			<li ng-repeat="p in people">{{p.Name}}</li>
-		</ul>-->
-		<cover ng-class="{visibleCover : menuVisible}" ng-view>
+			<div class="profile-container hide-in-mobile">
+				<img class="profile" src="public/style/images/profile.jpg">
+			</div>
+			<div class="desktop-main-menu">
+				<h2>StoryBoard</h2>
+				<menu ng-class="{menuvisible : menuVisible,menuhidden : !menuVisible}" >
+					<ul>
+						<li>Home</li>
+						<li>About</li>
+					</ul>
+				</menu>
+			</div>
+		</header><cover ng-class="{visibleCover : menuVisible}" ng-view>
 			
 		<cover>
 	</body>
