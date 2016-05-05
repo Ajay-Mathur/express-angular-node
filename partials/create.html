@@ -1,0 +1,26 @@
+<section id="main" ng-submit="formSubmit()" ng-class="{contentHidden : menuVisible}">
+	<form class="col-lg-12">
+		<fieldset class="col-lg-12">
+			<label for="title" class="col-lg-12">Title</label>
+			<input type="text" id="title" class="col-lg-6" ng-model="formData.title" required name="title" placeholder="Title of story">
+		</fieldset>
+		<fieldset class="col-lg-12">
+			<label for="credits" class="col-lg-12">highlight</label>
+			<textarea required type="text" id="credits" class="col-lg-6" ng-model="formData.highlight" name="credits" placeholder="Credits of story"></textarea>
+		</fieldset>
+		<fieldset class="col-lg-12">
+			<label for="storyData" class="col-lg-12">Article Data</label>
+			<textarea required name="storyData" placeholder="Article Description" id="storyData" class="col-lg-6" 
+			ng-model="formData.articleData" rows="10" cols="30">
+			</textarea>
+		</fieldset>
+		<fieldset class="col-lg-12">
+			<label for="title" class="col-lg-12">Your age</label>
+			<input type="text" id="title" class="col-lg-6" ng-model="formData.passcode" required name="title" placeholder="Title of story">
+		</fieldset>
+		<fieldset class="col-lg-12">
+			<input type="submit" id="uploadStory">
+		</fieldset>
+
+	</form>
+</section>

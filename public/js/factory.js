@@ -12,9 +12,21 @@
 	    return responseInterceptor;
 	}])
 	
-	.factory("storyPicked",function(){
+	.factory("store",["$http",function($http){
+		var data;
 		return{
-			id: ""
+			getData : function(callback){
+				if(data){
+					return callback(data);
+				}else{
+					$http({
+						url : "http://localhost:3002/getTopStories",
+						method: "GET"})
+					.then(function(d){
+						callback(data = d);		
+					});
+				}
+			}
 		}
-	})
+	}])
 })()

@@ -6,13 +6,43 @@
 			app.people = angular.fromJson(data.data);
 		});*/
 	}])
-	.controller("HomeController",["$http","$scope",function($http,$scope){
+	.controller("landingPage",["$http","$scope","store","$sce",function($http,$scope,store,$sce){
+		/*$http({
+				url : "http://localhost:3002/getTopStories",
+				method: "GET"})
+				.then(function(data){
+				//$scope.stories = angular.fromJson(data.data);
+				//console.log($scope.title.name);
+				$scope.stories = data.data;
+			});	*/
+		$scope.stories = [];
+		store.getData(
+			function(data){
+				$scope.stories = data.data;
+			}
+		);
+		$scope.renderHtml = function(html_code){
+		    return $sce.trustAsHtml(html_code);
+		};
+	}])
+	.controller("seeArticleController",["$http","$scope","store","$routeParams","filterFilter","$sce",function($http,$scope,store,$routeParams,filterFilter,$sce){
+		store.getData(
+			function(data){
+				$scope.items=filterFilter(data.data, {_id : $routeParams.params });
+			}
+		);
+		$scope.renderHtml = function(html_code){
+		    return $sce.trustAsHtml(html_code);
+		};
+	}])
+	.controller("createController",["$http","$scope",function($http,$scope){
 		
 		$scope.formData = {};
-		$scope.username = "Mathur";
 		$scope.formSubmit = function(){
+			$scope.formData.likes = 0;
+			$scope.formData.date = new Date();
 			$http({
-				url : "http://localhost:3002/saveStory",
+				url : "http://localhost:3002/saveBlog",
 				method: "GET",
 				params:$scope.formData})
 				.success(accessHeading)

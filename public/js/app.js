@@ -3,15 +3,23 @@
 	.config(['$httpProvider','$routeProvider','$locationProvider',function ($httpProvider,$routeProvider, $locationProvider) {
 	  $routeProvider.
 	    when('/', {
+	      	templateUrl: 'partials/landingPage',
+	    	controller: 'landingPage'
+	    }).
+	    when('/loadArticle',{
+	    	templateUrl: 'partials/seeArticle',
+	    	controller: 'seeArticleController'
+	    }).
+	    when('/dashboard', {
 	      	templateUrl: 'partials/seeStory',
 	    	controller: 'seeStory'
 	    }).
 	    when('/pizza', {
 	      template: 'I Love Pizza!'
 	    }).
-	    when('/seeStory',{
-	    	templateUrl: 'partials/home',
-	      	controller: 'HomeController'
+	    when('/createStory',{
+	    	templateUrl: 'partials/create',
+	      	controller: 'createController'
 	    }).
 	    when('/seeSelectedStory',{
 	    	templateUrl:'partials/detailedStory',

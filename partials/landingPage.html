@@ -1,0 +1,7 @@
+<div id="landing-page">
+	<div class="story-blog" ng-repeat="s in stories">
+		<h1><a href="loadArticle?params={{s._id}}">{{s.title}}</a></h1>
+		<span>Posted on : {{s.date}}</span>
+		<p ng-bind-html="renderHtml(s.highlight)"></p>
+	</div>
+</div>

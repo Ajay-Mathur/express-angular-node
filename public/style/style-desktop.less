@@ -1,0 +1,63 @@
+@media (min-width : 640px){
+	body{
+		overflow: hidden;
+		font-family: 'Ubuntu', sans-serif;
+		header{
+			display: inline-block;
+			background: darkslategrey;
+			width: 20%;
+			height: 100%; 
+			position: absolute;
+			color: white;
+			.profile-container{
+				text-align: center;
+				background: dimgray;
+				.profile{
+					width:200px;
+					height:290px;
+					border-radius:50%;
+					margin: 10px;
+				}
+			}
+			.desktop-main-menu{
+				h2{
+					text-align: center;				
+				}
+
+				padding: 10px;
+				ul{
+					li{
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+		cover{
+			display: inline-block;
+			width: calc(~'80% - 100px');
+			height: calc(~'100% - 100px');
+			padding: 50px;
+			margin-left: 20%;
+			overflow: auto;
+			h1{
+				padding-bottom : 20px;
+				a{
+					text-decoration: initial;
+					color: darkslategrey;
+				}
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+			#landing-page{
+				.story-blog{
+					padding-bottom: 15px;
+						+.story-blog{
+						padding-top : 15px;
+						border-top: 1px solid #8A8A8A;
+					}
+				}
+			}
+		}
+	}
+}
